@@ -31,6 +31,7 @@
           </li><li>rotationRateGamma: <span id="rotationRateGamma"></span>
           </li><li>rotationRateBeta: <span id="rotationRateBeta"></span>
           </li><li>rotationRateAlpha: <span id="rotationRateAlpha"></span>
+          </li><li>demoGamma: <span id="demoGamma"></span>
         </li></ul>
       </div>
      
@@ -83,8 +84,13 @@
         document.getElementById("rotationRateGamma").innerHTML = gamma;
         document.getElementById("rotationRateBeta").innerHTML = beta;
         document.getElementById("rotationRateAlpha").innerHTML = alpha;
-	      
 
+        if(gamma > 10){
+		document.getElementById("demoGamma").innerHTML = "Right";}
+        else if(gamma < -10){
+		document.getElementById("demoGamma").innerHTML = "Left";}
+        else{
+		document.getElementById("demoGamma").innerHTML = "None";}
       }, false);
     }
     else {
