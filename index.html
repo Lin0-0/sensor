@@ -25,13 +25,13 @@
       <div id="divOrientation" class="col-md-4">
         <h4>Orientation</h4>
         <ul>
+          </li><li>demoGamma: <span id="demoGamma"></span>
           <li>Tilt Left/Right: <span id="spanTiltGamma"></span>
           </li><li>Tilt Front/Back: <span id="spanTiltBeta"></span>
           </li><li>Direction: <span id="spanTiltDir"></span>
           </li><li>rotationRateGamma: <span id="rotationRateGamma"></span>
           </li><li>rotationRateBeta: <span id="rotationRateBeta"></span>
           </li><li>rotationRateAlpha: <span id="rotationRateAlpha"></span>
-          </li><li>demoGamma: <span id="demoGamma"></span>
         </li></ul>
       </div>
      
@@ -91,6 +91,12 @@
 		document.getElementById("demoGamma").innerHTML = "Right";}
         else{
 		document.getElementById("demoGamma").innerHTML = "None";}
+        if(beta > 10){
+		document.getElementById("demoBeta").innerHTML = "Front";}
+        else if(beta < -10){
+		document.getElementById("demoBeta").innerHTML = "Back";}
+        else{
+		document.getElementById("demoBeta").innerHTML = "None";}
       }, false);
     }
     else {
